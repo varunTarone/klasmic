@@ -2,12 +2,10 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableCaption,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { subjects } from "@/constants";
 import { cn, getSubjectColor } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,7 +16,7 @@ interface CompanionsListProps{
   classNames?: string;
 }
 
-const CompanionsList = ({ title, companions, classNames}: CompanionsListProps) => {
+const CompanionsList = ({ companions, classNames}: CompanionsListProps) => {
   return (
     <article className={cn('companion-list', classNames)}>
       <h2 className="font-bold text-3xl">Recent Session</h2>
