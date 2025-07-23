@@ -2,14 +2,11 @@
 import Image from 'next/image'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { removeKeysFromUrlQuery } from '@jsmastery/utils'
-import { formUrlQuery } from '@jsmastery/utils'
+import { useState } from 'react'
 
 const SearchInput = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const [searchQuery, setSearchQuery] = useState('');
 
