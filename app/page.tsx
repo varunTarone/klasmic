@@ -4,6 +4,8 @@ import CTA from '@/components/CTA'
 import { getAllCompanions, getRecentSessions } from '@/lib/actions/companion.action'
 import { getSubjectColor } from '@/lib/utils'
 
+export const dynamic = "force-dynamic";
+
 const Page = async () => {
   const companions = await getAllCompanions({ limit: 3 });
   const recentSessionsCompanions = await getRecentSessions();
@@ -23,15 +25,6 @@ const Page = async () => {
             color={getSubjectColor(companion.subject)}
           />
         ))}
-        <CompanionCard 
-          id="123" 
-          name="Neura the Brainy Explorer"
-          topic="Neuroscience"
-          subject="Biology"
-          duration={45}
-          color="#ffda6e"
-        />
-        
       </section>
       <section className='home-section'>
         <CompanionsList
