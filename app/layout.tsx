@@ -22,15 +22,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+  <ClerkProvider>
     <html lang="en">
-      <ClerkProvider>
         <html lang="en">
           <body className={`${bricolage.variable} antialiased`}>
             <Navbar />
             {children}
           </body>
         </html>
-      </ClerkProvider>
     </html>
+    </ClerkProvider>
   );
 }
