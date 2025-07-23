@@ -71,7 +71,7 @@ const CompanionsList = ({ title, companions, classNames}: CompanionsListProps) =
               </TableCell>
               <TableCell className="flex items-center gap-2 justify-end w-full">
                 <p className="text-2xl">
-                  {duration} 
+                  {duration} {' '}
                   <span className="max-md:hidden">mins</span>  
                 </p>
                   <Image
