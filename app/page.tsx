@@ -4,8 +4,6 @@ import CTA from '@/components/CTA'
 import { getAllCompanions, getRecentSessions } from '@/lib/actions/companion.action'
 import { getSubjectColor } from '@/lib/utils'
 
-const dynamic = "force-dynamic";
-
 const Page = async () => {
   const companions = await getAllCompanions({ limit: 3 });
   const recentSessionsCompanions = await getRecentSessions();
