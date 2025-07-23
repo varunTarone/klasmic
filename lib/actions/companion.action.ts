@@ -1,8 +1,7 @@
-'use server';
+"use client";
 
 import {auth} from "@clerk/nextjs/server";
 import {createSupabaseClient} from "@/lib/supabase";
-const dynamic = "force-dynamic";
 
 
 export const createCompanion = async (formData: CreateCompanion) => {
