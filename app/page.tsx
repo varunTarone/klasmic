@@ -3,6 +3,8 @@ import CompanionsList from '@/components/CompanionsList'
 import CTA from '@/components/CTA'
 import { getAllCompanions, getRecentSessions } from '@/lib/actions/companion.action'
 import { getSubjectColor } from '@/lib/utils'
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 const Page = async () => {
   const companions = await getAllCompanions({ limit: 3 });
