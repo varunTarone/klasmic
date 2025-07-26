@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "motion/react"
 import { backgroundPatternStyle } from "@/constants";
+import Link from "next/link";
 
 const Landing = () => {
   return (
@@ -29,9 +30,13 @@ const Landing = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                   <motion.button 
-                    className="font-mono text-lg bg-black text-white border-[3px] border-black shadow-[4px_4px_0px_#000] px-8 py-4 hover:bg-gray-800 transition-colors w-full sm:w-auto rounded-lg"
+                    className="font-mono text-lg bg-black text-white border-[3px] border-black shadow-[4px_4px_0px_#000] px-8 py-4 hover:bg-gray-800 transition-colors w-full sm:w-auto rounded-lg cursor-pointer"
                   >
-                    Start Building
+                    <Link href={"/sign-in"}>
+                      <div>
+                        Start Building  
+                      </div>
+                    </Link>
                   </motion.button>
               
                 </div>
