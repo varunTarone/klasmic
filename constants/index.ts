@@ -7,6 +7,12 @@ export const subjects = [
   "economics",
 ];
 
+export const backgroundPatternStyle = {
+    backgroundImage: 'linear-gradient(rgba(0,0,0, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0, 0.03) 1px, transparent 1px)',
+    backgroundSize: '20px 20px',
+    backgroundColor: '#FDFDEA',
+  };
+
 export const subjectsColors = {
   science: "#E5D0FF",
   maths: "#FFDA6E",

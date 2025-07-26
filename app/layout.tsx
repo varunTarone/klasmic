@@ -1,3 +1,4 @@
+'use client';
 import { type Metadata } from 'next'
 import {
   ClerkProvider
@@ -11,7 +12,7 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Klasmic",
   description: "Real-time AI Teaching and Learning LMS app",
 };

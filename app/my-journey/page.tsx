@@ -12,6 +12,7 @@ import {
 } from "@/lib/actions/companion.action";
 import Image from "next/image";
 import CompanionsList from "@/components/CompanionsList";
+import { backgroundPatternStyle } from "@/constants";
 
 const Profile = async () => {
   const user = await currentUser();
@@ -21,8 +22,14 @@ const Profile = async () => {
   const companions = await getUserCompanions(user.id);
   const sessionHistory = await getUserSessions(user.id);
   return (
-    <main className="min-lg:w-3/4">
-      <section className="flex justify-between gap-4 max-sm:flex-col items-center">
+    <main 
+      className="w-full p-20"
+            style={backgroundPatternStyle}
+>
+        
+      <section 
+      className="flex justify-between gap-4 max-sm:flex-col items-center"
+      >
         <div className="flex gap-4 items-center">
           <Image
             src={user.imageUrl}

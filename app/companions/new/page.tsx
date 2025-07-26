@@ -1,4 +1,5 @@
 import CompanionForm from '@/components/CompanionForm'
+import { backgroundPatternStyle } from '@/constants';
 import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 
@@ -8,7 +9,10 @@ const NewCompanion = async () => {
     redirect('/sign-in');
   }
   return (
-    <main className='min-lg:w-1/3 min-md:w-2/3 items-center justify-center'>
+    <main 
+      className='min-lg:w-1/3 min-md:w-2/3 items-center justify-center'
+      style={backgroundPatternStyle}
+      >
       <article className='w-full gap-4 flex-col'>
         <h1>Companion Builder</h1>
         <CompanionForm />
